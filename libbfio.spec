@@ -2,7 +2,7 @@ Summary:	Library to support (abstracted) basic file I/O
 Summary(pl.UTF-8):	Biblioteka obsługująca (abstrakcyjne) podstawowe operacje we/wy dla plików
 Name:		libbfio
 Version:	20150102
-Release:	1
+Release:	2
 License:	LGPL v3+
 Group:		Libraries
 Source0:	https://github.com/libyal/libbfio/archive/%{version}/%{name}-%{version}.tar.gz
