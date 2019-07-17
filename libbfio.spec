@@ -1,20 +1,12 @@
-# m4/libcdata.m4
+# see m4/${libname}.m4 />= for required version of particular library
 %define		libcdata_ver	20190112
-# m4/libcerror.m4
 %define		libcerror_ver	20120425
-# m4/libcfile.m4
 %define		libcfile_ver	20160409
-# m4/libclocale.m4
 %define		libclocale_ver	20120425
-# m4/libcnotify.m4
 %define		libcnotify_ver	20120425
-# m4/libcpath.m4
 %define		libcpath_ver	20180716
-# m4/libcsplit.m4
 %define		libcsplit_ver	20120701
-# m4/libcthreads.m4
 %define		libcthreads_ver	20160404
-# m4/libuna.m4
 %define		libuna_ver	20181006
 Summary:	Library to support (abstracted) basic file I/O
 Summary(pl.UTF-8):	Biblioteka obsługująca (abstrakcyjne) podstawowe operacje we/wy dla plików
