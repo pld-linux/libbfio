@@ -1,40 +1,55 @@
+# m4/libcdata.m4
+%define		libcdata_ver	20190112
+# m4/libcerror.m4
+%define		libcerror_ver	20120425
+# m4/libcfile.m4
+%define		libcfile_ver	20160409
+# m4/libclocale.m4
+%define		libclocale_ver	20120425
+# m4/libcnotify.m4
+%define		libcnotify_ver	20120425
+# m4/libcpath.m4
+%define		libcpath_ver	20180716
+# m4/libcsplit.m4
+%define		libcsplit_ver	20120701
+# m4/libcthreads.m4
+%define		libcthreads_ver	20160404
+# m4/libuna.m4
+%define		libuna_ver	20181006
 Summary:	Library to support (abstracted) basic file I/O
 Summary(pl.UTF-8):	Biblioteka obsługująca (abstrakcyjne) podstawowe operacje we/wy dla plików
 Name:		libbfio
-Version:	20150102
-Release:	2
+Version:	20190112
+Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	https://github.com/libyal/libbfio/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	2fc61eb9851303721eceae26bacde5c1
-Patch0:		%{name}-system-libs.patch
+#Source0Download: https://github.com/libyal/libbfio/releases
+Source0:	https://github.com/libyal/libbfio/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
+# Source0-md5:	130fd3c263a85cf51a5e2eb06c601d3d
 URL:		https://github.com/libyal/libbfio/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1.6
 BuildRequires:	gettext-tools >= 0.18.1
-BuildRequires:	libcdata-devel >= 20150102
-BuildRequires:	libcerror-devel >= 20120425
-BuildRequires:	libcfile-devel >= 20140503
-BuildRequires:	libclocale-devel >= 20120425
-BuildRequires:	libcnotify-devel >= 20120425
-BuildRequires:	libcpath-devel >= 20120701
-BuildRequires:	libcsplit-devel >= 20120701
-BuildRequires:	libcstring-devel >= 20120425
-BuildRequires:	libcthreads-devel >= 20130509
-BuildRequires:	libuna-devel >= 20120425
+BuildRequires:	libcdata-devel >= %{libcdata_ver}
+BuildRequires:	libcerror-devel >= %{libcerror_ver}
+BuildRequires:	libcfile-devel >= %{libcfile_ver}
+BuildRequires:	libclocale-devel >= %{libclocale_ver}
+BuildRequires:	libcnotify-devel >= %{libcnotify_ver}
+BuildRequires:	libcpath-devel >= %{libcpath_ver}
+BuildRequires:	libcsplit-devel >= %{libcsplit_ver}
+BuildRequires:	libcthreads-devel >= %{libcthreads_ver}
+BuildRequires:	libuna-devel >= %{libuna_ver}
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	sed >= 4.0
-Requires:	libcdata >= 20150102
-Requires:	libcerror >= 20120425
-Requires:	libcfile >= 20140503
-Requires:	libclocale >= 20120425
-Requires:	libcnotify >= 20120425
-Requires:	libcpath >= 20120701
-Requires:	libcsplit >= 20120701
-Requires:	libcstring >= 20120425
-Requires:	libcthreads >= 20130509
-Requires:	libuna >= 20120425
+Requires:	libcdata >= %{libcdata_ver}
+Requires:	libcerror >= %{libcerror_ver}
+Requires:	libcfile >= %{libcfile_ver}
+Requires:	libclocale >= %{libclocale_ver}
+Requires:	libcnotify >= %{libcnotify_ver}
+Requires:	libcpath >= %{libcpath_ver}
+Requires:	libcsplit >= %{libcsplit_ver}
+Requires:	libcthreads >= %{libcthreads_ver}
+Requires:	libuna >= %{libuna_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,16 +64,15 @@ Summary:	Header files for libbfio library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libbfio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libcdata-devel >= 20150102
-Requires:	libcerror-devel >= 20120425
-Requires:	libcfile-devel >= 20140503
-Requires:	libclocale-devel >= 20120425
-Requires:	libcnotify-devel >= 20120425
-Requires:	libcpath-devel >= 20120701
-Requires:	libcsplit-devel >= 20120701
-Requires:	libcstring-devel >= 20120425
-Requires:	libcthreads-devel >= 20130509
-Requires:	libuna-devel >= 20120425
+Requires:	libcdata-devel >= %{libcdata_ver}
+Requires:	libcerror-devel >= %{libcerror_ver}
+Requires:	libcfile-devel >= %{libcfile_ver}
+Requires:	libclocale-devel >= %{libclocale_ver}
+Requires:	libcnotify-devel >= %{libcnotify_ver}
+Requires:	libcpath-devel >= %{libcpath_ver}
+Requires:	libcsplit-devel >= %{libcsplit_ver}
+Requires:	libcthreads-devel >= %{libcthreads_ver}
+Requires:	libuna-devel >= %{libuna_ver}
 
 %description devel
 Header files for libbfio library.
@@ -80,11 +94,9 @@ Statyczna biblioteka libbfio.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__gettextize}
-%{__sed} -i -e 's/ po\/Makefile.in//' configure.ac
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
