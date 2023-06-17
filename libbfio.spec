@@ -1,5 +1,5 @@
 # see m4/${libname}.m4 />= for required version of particular library
-%define		libcdata_ver	20190112
+%define		libcdata_ver	20220115
 %define		libcerror_ver	20120425
 %define		libcfile_ver	20160409
 %define		libclocale_ver	20120425
@@ -7,21 +7,21 @@
 %define		libcpath_ver	20180716
 %define		libcsplit_ver	20120701
 %define		libcthreads_ver	20160404
-%define		libuna_ver	20181006
+%define		libuna_ver	20210801
 Summary:	Library to support (abstracted) basic file I/O
 Summary(pl.UTF-8):	Biblioteka obsługująca (abstrakcyjne) podstawowe operacje we/wy dla plików
 Name:		libbfio
-Version:	20190112
+Version:	20221025
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libbfio/releases
 Source0:	https://github.com/libyal/libbfio/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	130fd3c263a85cf51a5e2eb06c601d3d
+# Source0-md5:	ca0b7723d34c38c18abb11c65fd6360c
 URL:		https://github.com/libyal/libbfio/
-BuildRequires:	autoconf >= 2.59
+BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
-BuildRequires:	gettext-tools >= 0.18.1
+BuildRequires:	gettext-tools >= 0.21
 BuildRequires:	libcdata-devel >= %{libcdata_ver}
 BuildRequires:	libcerror-devel >= %{libcerror_ver}
 BuildRequires:	libcfile-devel >= %{libcfile_ver}
@@ -30,8 +30,8 @@ BuildRequires:	libcnotify-devel >= %{libcnotify_ver}
 BuildRequires:	libcpath-devel >= %{libcpath_ver}
 BuildRequires:	libcsplit-devel >= %{libcsplit_ver}
 BuildRequires:	libcthreads-devel >= %{libcthreads_ver}
+BuildRequires:	libtool >= 2:2
 BuildRequires:	libuna-devel >= %{libuna_ver}
-BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	libcdata >= %{libcdata_ver}
 Requires:	libcerror >= %{libcerror_ver}
