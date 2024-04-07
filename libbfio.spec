@@ -1,5 +1,5 @@
 # see m4/${libname}.m4 />= for required version of particular library
-%define		libcdata_ver	20220115
+%define		libcdata_ver	20230108
 %define		libcerror_ver	20120425
 %define		libcfile_ver	20160409
 %define		libclocale_ver	20120425
@@ -7,17 +7,17 @@
 %define		libcpath_ver	20180716
 %define		libcsplit_ver	20120701
 %define		libcthreads_ver	20160404
-%define		libuna_ver	20210801
+%define		libuna_ver	20230702
 Summary:	Library to support (abstracted) basic file I/O
 Summary(pl.UTF-8):	Biblioteka obsługująca (abstrakcyjne) podstawowe operacje we/wy dla plików
 Name:		libbfio
-Version:	20221025
+Version:	20240313
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libbfio/releases
 Source0:	https://github.com/libyal/libbfio/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	ca0b7723d34c38c18abb11c65fd6360c
+# Source0-md5:	02a1bfb8b5db0a38919a6f64a75c9562
 URL:		https://github.com/libyal/libbfio/
 BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
